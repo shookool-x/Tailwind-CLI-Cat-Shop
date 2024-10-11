@@ -8,76 +8,185 @@
   <link rel="stylesheet" href="./output.css">
 </head>
 
-<body class="font-main text-gray-800">
+<body class="font-main text-white bg-bg1 text-xl">
 
   <div> <!--start container-->
 
     <div> <!--start nav-->
-      <nav>
-        <div>
-          <h1 class="text-4xl font-black uppercase p-4 border-b border-teal-400 font-tng">
+      <nav class="navigate border-b border-teal-400">
+        <div class="m-4 w-full sm:w-auto px-4 flex justify-between items-center">
+          <h1 class="text-4xl font-black uppercase font-titr">
             <a href="#">Cat shop</a>
           </h1>
+          <div id="svg" class="imgDiv">
+            <img class="" src="../assets/pics/hamburger-menu-svgrepo-com.svg" alt="no-img">
+          </div>
         </div>
-        <ul>
-          <li class="text-gray-700">
-            <a href="">
-              <span>Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>about</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <span>contact</span>
-            </a>
-          </li>
-        </ul>
+        <div id="list" class="hidden sm:block">
+          <ul class="flex flex-col justify-center items-center sm:flex-row sm:justify-center sm:items-center">
+            <li class="m-2">
+              <a class="border-red-600 hover:border-b-4 p-2 ">
+                <img class="inline w-4 mx-1 aspect-square" src="../assets/pics/home.svg">
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="m-2">
+              <a class="border-red-600 hover:border-b-4 pb-2" href="">
+                <img class="inline w-5 mx-1 aspect-square" src="../assets/pics/about.svg">
+                <span>about</span>
+              </a>
+            </li>
+            <li class="m-2">
+              <a class="border-red-600 hover:border-b-4 pb-2 " href="">
+                <img class="inline w-5 mx-1 aspect-square" src="../assets/pics/contact.svg">
+                <span>contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
       </nav>
     </div> <!--end nav-->
 
     <main class="px-16 py-6">
 
-      <div>
-        <a href="#" class="text-myRed-2">Login</a>
-        <a href="" class="text-myRed-1">Sign up</a>
+      <div class="flex justify-center md:justify-end">
+        <a href="#" class="a-link ">Login</a>
+        <a href="#" class="a-link">Sign up</a>
       </div>
 
+
       <header>
-        <h2 class="text-gray-600 text-6xl font-semibold">Cats</h2>
-        <h3 class="text-2xl font-semibold pl-1">Everyone loves cats</h3>
+        <h2 class="text-6xl font-semibold text-center">Cats</h2>
+        <h3 class="text-2xl font-semibold text-center">Everyone loves cats</h3>
       </header>
 
+      <!-- popular and new cats -->
       <div>
 
-        <h4 class="font-bold mt-12 pb-2 border-b-2 border-teal-500">New Cats!</h4>
+        <h4 class="font-bold mt-12 pb-2 border-b-2 border-teal-500 text-center">New Cats!</h4>
 
-        <div class="mt-8"> <!--cards-->
-          <div>
-            <img src="../assets/pics/1.jpeg" alt="no-pics">
-            <div>
-              <span>C1</span>
-              <span>Rank:--</span>
+        <!--cards New cats!-->
+
+        <div class="mt-8 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
+
+
+          <div class="card-new">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/1.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C368</span>
+              <span class="block font-bold ">Rank:--</span>
             </div>
+          </div>
+
+          <div class="card-new">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/2.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C265</span>
+              <span class="block font-bold ">Rank:--</span>
+            </div>
+          </div>
+
+          <div class="card-new">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/3.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C246</span>
+              <span class="block font-bold ">Rank:--</span>
+            </div>
+          </div>
+
+          <div class="card-new">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/4.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C298</span>
+              <span class="block font-bold ">Rank:--</span>
+            </div>
+          </div>
+
+          <div class="card-new">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/5.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C751</span>
+              <span class="block font-bold ">Rank:--</span>
+            </div>
+          </div>
+
+
+        </div>
+
+        <h4 class="font-bold mt-12 pb-2 border-b-2 border-teal-500 text-center">Most Popular</h4>
+
+        <!--cards for Most Popular cats-->
+
+        <div class="mt-8 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4">
+
+
+          <div class="card-popular relative">
+            <img class="w-3/4 aspect-square rounded-full object-cover object-top" src="../assets/pics/6.jpeg"
+              alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C159</span>
+              <span class="block font-bold ">Rank:1</span>
+            </div>
+            <div class="w-8 aspect-square overflow-hidden absolute top-3 left-3">
+              <img src="../assets/pics/king.svg">
+            </div>
+          </div>
+
+          <div class="card-popular">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/7.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C126</span>
+              <span class="block font-bold ">Rank:2</span>
+            </div>
+          </div>
+
+          <div class="card-popular">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/8.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C147</span>
+              <span class="block font-bold ">Rank:3</span>
+            </div>
+          </div>
+
+          <div class="card-popular">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/9.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C185</span>
+              <span class="block font-bold ">Rank:4</span>
+            </div>
+          </div>
+
+          <div class="card-popular">
+            <img class="w-3/4 aspect-square rounded-full object-cover" src="../assets/pics/10.jpeg" alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C168</span>
+              <span class="block font-bold ">Rank:5</span>
+            </div>
+          </div>
+
+          <div class="card-popular">
+            <img class="w-3/4 aspect-square rounded-full object-cover object-top" src="../assets/pics/11.jpeg"
+              alt="no-pics">
+            <div class="text-center">
+              <span class="block font-bold ">C112</span>
+              <span class="block font-bold ">Rank:6</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flex justify-center mt-8 cursor-pointer ">
+          <div class="bg-green-700 p-2 rounded-xl border-black active:border-4 ">Load More ...
           </div>
         </div>
 
-        <h4 class="font-bold mt-12 pb-2 border-b-2 border-teal-500">Most Popular</h4>
-
-        <div class="mt-8"><!--cards-->
-
-        </div>
-
-        <div>
-          <div class="bg-gray-300">Load More ...</div>
-        </div>
-
       </div>
+
+
     </main>
   </div> <!--end container-->
+  <script src="./index.js"></script>
 </body>
 
 </html>

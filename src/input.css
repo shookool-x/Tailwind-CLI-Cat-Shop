@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-new {
+  @apply flex flex-col items-center justify-center bg-bg3 rounded-3xl p-4 shadow-2xl cursor-pointer hover:bg-bg4 hover:scale-105 transition-all duration-700 ease-in-out;
+}
+
+.card-popular {
+  @apply flex flex-col items-center justify-center bg-bg2 rounded-3xl p-4 shadow-2xl cursor-pointer hover:bg-bg4 hover:scale-105 transition-all duration-700 ease-in-out;
+}
+
+.a-link {
+  @apply bg-red-800 font-bold mx-1 p-2 rounded-full tracking-wider border-2 border-black hover:text-black hover:border-white hover:border-2;
+}
+
+.navigate {
+  @apply flex flex-col justify-start items-end sm:flex-row sm:justify-start sm:items-center;
+}
+
+.imgDiv {
+  @apply w-10 border-black border-2 rounded-xl bg-green-600 hover:bg-green-800 p-0 aspect-square cursor-pointer sm:hidden
+}
+
